@@ -1,13 +1,13 @@
 <template class="row">
   <div class="hello col-4">
     <h1>{{ target.name }}</h1>
-    <h1 :class="checkHealth()">{{target.health}}</h1>
-    <h1 :class="target.health > 50 ? 'text-success' : 'text-danger'">{{target.health}}</h1>
+    <!-- <h1 :class="checkHealth()">{{target.health}}</h1> -->
+    <!-- <h1 :class="target.health > 50 ? 'text-success' : 'text-danger'">{{target.health}}</h1> -->
     <h1
       :class="{'text-success' : true, 'text-warning' : target.health < 75, 'text-danger' : target.health < 50}"
     >{{target.health}}</h1>
     <h1>{{target.hits}}</h1>
-    <button class="btn btn-danger m-1" @click="punch();target.hits += 100">punch</button>
+    <button class="btn btn-danger m-1" @click="punch();target.hits + 1">punch</button>
     <button
       class="btn btn-primary m-1"
       v-for="item in items"

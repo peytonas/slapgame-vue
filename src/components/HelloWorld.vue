@@ -1,5 +1,5 @@
-<template>
-  <div class="hello">
+<template class="row">
+  <div class="hello col-4">
     <h1>{{ target.name }}</h1>
     <h1 :class="checkHealth()">{{target.health}}</h1>
     <h1 :class="target.health > 50 ? 'text-success' : 'text-danger'">{{target.health}}</h1>
@@ -31,11 +31,11 @@ export default {
       },
       items: [
         {
-          name: "Shield",
+          name: "shield",
           mod: -0.5
         },
         {
-          name: "Sword",
+          name: "sword",
           mod: 0.5
         }
       ]
@@ -62,9 +62,9 @@ export default {
     checkHealth() {
       let cl = "text-success";
       if (this.target.health < 50) {
-        cl = "text.danger";
+        cl = "text-danger";
       } else if (this.target.health < 80) {
-        cl = "text0warning";
+        cl = "text-warning";
       }
       return cl;
     }

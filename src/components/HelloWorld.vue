@@ -1,8 +1,6 @@
 <template class="row">
   <div class="hello col-4">
     <h1>{{ target.name }}</h1>
-    <!-- <h1 :class="checkHealth()">{{target.health}}</h1> -->
-    <!-- <h1 :class="target.health > 50 ? 'text-success' : 'text-danger'">{{target.health}}</h1> -->
     <h1
       :class="{'text-success' : true, 'text-warning' : target.health < 75, 'text-danger' : target.health < 50}"
     >{{target.health}}</h1>
@@ -19,24 +17,24 @@
 
 <script>
 export default {
-  name: "Goku",
+  name: "HelloWorld",
   props: ["targetName"],
   data() {
     return {
       target: {
-        name: this.targetName,
+        name: this.name,
         health: 100,
         hits: 0,
         inventory: []
       },
       items: [
         {
-          name: "shield",
+          name: "block",
           mod: -0.5
         },
         {
-          name: "sword",
-          mod: 0.5
+          name: "charge",
+          mod: 99
         }
       ]
     };

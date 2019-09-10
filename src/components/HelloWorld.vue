@@ -72,6 +72,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+img {
+  height:345px; 
+  margin-left: -200px;
+}
 h3 {
   margin: 40px 0 0;
 }
